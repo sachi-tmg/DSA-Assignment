@@ -20,7 +20,23 @@ public class MyFeedPanel extends javax.swing.JPanel {
     public MyFeedPanel() {
         initComponents();
         displayPosts();
-    }
+        likeBtn1.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    likeBtnActionPerformed(evt, "Post 1");
+                }
+
+            });
+
+            // ActionListener for likeBtn2
+            likeBtn2.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    likeBtnActionPerformed(evt, "Post 2");
+                }
+            });
+        }
+        private void likeBtnActionPerformed(java.awt.event.ActionEvent evt, String postNumber) {
+            JOptionPane.showMessageDialog(null, "Liked " + postNumber);
+        }
 
     /**
      * This method is called from within the constructor to initialize the form.
